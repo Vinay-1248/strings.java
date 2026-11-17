@@ -1,0 +1,11 @@
+public class GoalParserInterpretationGoalParserInterpretation{
+    public static String interpret(String command) {
+        return command.replace("()", "o").replace("(al)", "al");
+    }
+
+    public static void main(String[] args) {
+        System.out.println(interpret("G()(al)"));         // Output: "Goal"
+        System.out.println(interpret("G()()()()(al)"));   // Output: "Gooooal"
+        System.out.println(interpret("(al)G(al)()()G"));  // Output: "alGalooG"
+    }
+}
